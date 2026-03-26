@@ -1,2 +1,42 @@
+# Node.js
 node_modules/
+npm-debug.log
+yarn-error.log
 .env
+.env.test
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+.hypothesis/
+
+# Audio Guard Services Specific
+services/checkpoints/
+services/logs/
+services/results/
+services/runs/
+services/data/
+__pycache__/
+
+# Logs
+logs/
+*.log
+
+# Misc
+.DS_Store
+.vscode/
+.idea/
+.ipynb_checkpoints/
