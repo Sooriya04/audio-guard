@@ -17,9 +17,9 @@ exports.signup = catchAsync(async(req, res, next)=>{
     if(existingEmail.length > 0){
         return next(new AppError('Email already exist', 409));
     }
-    const hashed_password = hashing.hashPassword(password)
+    const hash_password = await hashing.hashPassword(password)
     const user = await userQuery.insertUser({
-        email, hashed_password
+        email, hash_password
     })
 
     res.status(201).json({

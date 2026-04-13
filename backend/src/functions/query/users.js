@@ -15,7 +15,7 @@ exports.insertUser = async({email, hash_password}) => {
     const {
         rows 
     } = await pool.query(
-        `INSERT INTO users (email, password)
+        `INSERT INTO users (email, password_hash)
          VALUES($1, $2) 
          RETURNING id, email, created_at
         `,
@@ -27,7 +27,7 @@ exports.insertUser = async({email, hash_password}) => {
 exports.login = async(email) => {
     const { rows } = await pool.query(
         `
-        SELECT id, email, password FROM users WHERE email = $1
+        SELECT id, email, password_hash AS password FROM users WHERE email = $1
         `,
         [email]
     )
