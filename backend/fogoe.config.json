@@ -1,9 +1,0 @@
-{
-  "defaults": {
-    "language": "js",
-    "arch": "mvc",
-    "runtime": "express",
-    "type": "cjs",
-    "git": true
-  }
-}
